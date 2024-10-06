@@ -3,6 +3,7 @@
 
 ## Quick Start
 
+**docker-compose 启动**
 ```bash
 
 git clone https://github.com/RKwork85/rk_gptWechat.git
@@ -24,6 +25,17 @@ docker compose up -d
 sudo docker logs -f chatgpt-on-wechat
 ```
 
+**开发 环境搭建**
+
+对照 docker-compose, 修改config.json文件,后安装依赖
+
+>pip install -r requirements.txt 
+>pip install -r requirements-optional.txt
+
+python app.py
+
+
+
 ### 关于配置项修改
 
 **1.个人聊天**
@@ -41,3 +53,7 @@ sudo docker logs -f chatgpt-on-wechat
 **other**
 
 1 理论上可以修改源代码，配置绘画SD本地API接口：Undo
+
+2 对接fastgpt项目需要把 model名 改为fastgpt 模型列表中显示的名称，另外在发布渠道中生成密钥
+
+3 关于开发详见**rkwork**目录

@@ -147,7 +147,8 @@ class ChatChannel(Channel):
                     pass
                 else:
                     return None
-            content = content.strip()
+            content = content.strip()                               # 对用户的信息进行处理 ：
+            # print("rkwork: content ", content)                    # rkwork: content  你好
             img_match_prefix = check_prefix(content, conf().get("image_create_prefix",[""]))
             if img_match_prefix:
                 content = content.replace(img_match_prefix, "", 1)
@@ -214,6 +215,7 @@ class ChatChannel(Channel):
 
                 if reply.type == ReplyType.TEXT:
                     new_context = self._compose_context(ContextType.TEXT, reply.content, **context.kwargs)
+                    # print("rkwork: new ", new_context)            # 没有经过该逻辑
                     if new_context:
                         reply = self._generate_reply(new_context)
                     else:
@@ -230,7 +232,15 @@ class ChatChannel(Channel):
             else:
                 logger.warning("[chat_channel] unknown context type: {}".format(context.type))
                 return
+
+        # processing =      print(type(processing))；    是一个情感支持小伙伴，我愿意倾听您的心声并为您提供帮助。 我随时准备聆听您的心声！\n\n； <class 'str'>
+        result = reply.content.replace("\\n\\n", '')
+        print("result内容：",result)
+        # 对最终的结果格式进行格式修正
+        reply.content = result
+
         return reply
+        # print("rkwork: reply ", reply)                #rkwork: reply Reply(type=TEXT, content=你好，我是周震老师的数字分身，我是一个情感支持小伙伴哦！ 我随时准备聆听您的心声，为您提供信息和帮助。 我随时准备聆听您的心声，为您提供信息和帮助。您可以和我聊任何您想聊的事。\n\n)
 
     def _decorate_reply(self, context: Context, reply: Reply) -> Reply:
         if reply and reply.type:

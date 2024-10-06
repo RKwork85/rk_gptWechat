@@ -1,0 +1,103 @@
+rkwork@rkwork:~/rkwork/project/chatgpt-on-wechat$ /home/rkwork/miniconda3/envs/rkcow/bin/python /home/rkwork/rkwork/project/chatgpt-on-wechat/app.py
+[INFO][2024-09-30 12:15:19][config.py:299] - [INIT] load config: {'channel_type': 'wx', 'model': 'emo', 'open_ai_api_key': 'fas*****HFs', 'open_ai_api_base': 'http://127.0.0.1:3000/api/v1', 'claude_api_key': 'YOU*****KEY', 'text_to_image': 'dall-e-2', 'voice_to_text': 'openai', 'text_to_voice': 'openai', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['bot', '@bot', ''], 'single_chat_reply_prefix': '[bot] ', 'group_chat_prefix': ['@bot'], 'group_name_white_list': ['rkwork'], 'image_create_prefix': ['画'], 'speech_recognition': True, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 2500, 'expires_in_seconds': 3600, 'character_desc': '你是基于大语言模型的AI智能助手，旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'subscribe_msg': '感谢您的关注！\n这里是AI智能助手，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '*****', 'linkai_app_code': ''}
+[INFO][2024-09-30 12:15:19][config.py:225] - [Config] User datas file not found, ignore.
+/home/rkwork/miniconda3/envs/rkcow/lib/python3.8/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)"
+[INFO][2024-09-30 12:15:19][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:88] - Scaning plugins ...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-09-30 12:15:19][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-09-30 12:15:19][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-09-30 12:15:19][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+chatgpt-tool-hub version: 0.5.0
+[INFO][2024-09-30 12:15:19][plugin_manager.py:41] - Plugin tool_v0.5 registered, path=./plugins/tool
+[INFO][2024-09-30 12:15:19][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-09-30 12:15:19][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-09-30 12:15:19][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-09-30 12:15:19][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-09-30 12:15:19][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-09-30 12:15:19][plugin_manager.py:123] - Plugin GODCMD not found in pconfig, adding to pconfig...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:123] - Plugin KEYWORD not found in pconfig, adding to pconfig...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:123] - Plugin BANWORDS not found in pconfig, adding to pconfig...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:123] - Plugin LINKAI not found in pconfig, adding to pconfig...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:123] - Plugin TOOL not found in pconfig, adding to pconfig...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:123] - Plugin ROLE not found in pconfig, adding to pconfig...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:123] - Plugin DUNGEON not found in pconfig, adding to pconfig...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:123] - Plugin BDUNIT not found in pconfig, adding to pconfig...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:123] - Plugin HELLO not found in pconfig, adding to pconfig...
+[INFO][2024-09-30 12:15:19][plugin_manager.py:123] - Plugin FINISH not found in pconfig, adding to pconfig...
+[INFO][2024-09-30 12:15:19][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为9613。
+[INFO][2024-09-30 12:15:19][godcmd.py:210] - [Godcmd] inited
+[INFO][2024-09-30 12:15:19][keyword.py:40] - [keyword] {}
+[INFO][2024-09-30 12:15:19][keyword.py:42] - [keyword] inited.
+[WARNING][2024-09-30 12:15:19][banwords.py:54] - [Banwords] init failed, ignore or see https://github.com/zhayujie/chatgpt-on-wechat/tree/master/plugins/banwords .
+[WARNING][2024-09-30 12:15:19][plugin_manager.py:150] - Failed to init BANWORDS, diabled. [Errno 2] No such file or directory: '/home/rkwork/rkwork/project/chatgpt-on-wechat/plugins/banwords/banwords.txt'
+[INFO][2024-09-30 12:15:19][linkai.py:35] - [LinkAI] inited, config={'group_app_map': {'测试群名1': 'default', '测试群名2': 'Kv2fXJcH'}, 'midjourney': {'enabled': False, 'auto_translate': True, 'img_proxy': True, 'max_tasks': 3, 'max_tasks_per_user': 1, 'use_image_create_prefix': True}, 'summary': {'enabled': False, 'group_enabled': True, 'max_file_size': 5000, 'type': ['FILE', 'SHARING']}}
+[WARNING][2024-09-30 12:15:19][tool.py:27] - [tool] init failed, ignore 
+[WARNING][2024-09-30 12:15:19][plugin_manager.py:150] - Failed to init TOOL, diabled. config.json not found
+[INFO][2024-09-30 12:15:19][role.py:69] - [Role] inited
+[INFO][2024-09-30 12:15:19][dungeon.py:56] - [Dungeon] inited
+[WARNING][2024-09-30 12:15:19][bdunit.py:42] - [BDunit] init failed, ignore 
+[WARNING][2024-09-30 12:15:19][plugin_manager.py:150] - Failed to init BDUNIT, diabled. config.json not found
+[INFO][2024-09-30 12:15:19][hello.py:38] - [Hello] inited
+[INFO][2024-09-30 12:15:19][finish.py:23] - [Finish] inited
+Ready to login.
+Getting uuid of QR code.
+Downloading QR code.
+You can also scan QRCode in any website below:
+https://api.pwmqr.com/qrcode/create/?url=https://login.weixin.qq.com/l/QbYje_ef9Q==
+https://my.tv.sohu.com/user/a/wvideo/getQRCode.do?text=https://login.weixin.qq.com/l/QbYje_ef9Q==
+https://api.qrserver.com/v1/create-qr-code/?size=400×400&data=https://login.weixin.qq.com/l/QbYje_ef9Q==
+https://api.isoyu.com/qr/?m=1&e=L&p=20&url=https://login.weixin.qq.com/l/QbYje_ef9Q==
+█▀▀▀▀▀▀▀█████▀█▀▀███▀██▀▀▀▀▀▀▀█
+█ █▀▀▀█ █▄▄ ▄▀▄▄ ▄▄█▄ █ █▀▀▀█ █
+█ █   █ █▀▄▀▀▄█ █▄▀▀ ▄█ █   █ █
+█ ▀▀▀▀▀ █▀█ ▄▀█ ▄ █ ▄▀█ ▀▀▀▀▀ █
+█▀█▀█▀█▀██▀▀   ▀▄  █▀ ███▀██▀██
+██ ▀▀ ▀▀▄▀▀▄ ▀█ █  ▀█▀ ▄▀▀▄▀▀ █
+█▀ ██▄▄▀▀█▄ ▀ ▄▄▀▀ ▄▀ ▄ ▄▄▀█ ▀█
+█▀▀▄   ▀█ █▀▄ ▄ █▄▀██▄ ▄▀█ █▀ █
+██▀███▄▀▄█ ▀     █ ▄ ▀  ██ █ ▀█
+█▀▄▀▄▀ ▀█▀▄█▀ █▄▄ ███ ▀ ▀█▄▄▀ █
+█▀▄█▄▄█▀ █▀▄    █▀   ▀▀ ▀ ▄█▄██
+█▀▀▀▀▀▀▀█▄███ █▄█▄▀█▀ █▀█ ▀▄  █
+█ █▀▀▀█ █▀▄█▄▀▄ ▄█ ▄█ ▀▀▀ ▄█▄▄█
+█ █   █ █▀█ ▀▀█▀▄▄██████  ▀▄▄ █
+█ ▀▀▀▀▀ █▀█▀▄█▀█▀  ▀  ▀▀ ███ ▀█
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+/snap/core20/current/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.29' not found (required by /lib/x86_64-linux-gnu/libproxy.so.1)
+Failed to load module: /home/rkwork/snap/code/common/.cache/gio-modules/libgiolibproxy.so
+eog: symbol lookup error: /snap/core20/current/lib/x86_64-linux-gnu/libpthread.so.0: undefined symbol: __libc_pthread_init, version GLIBC_PRIVATE
+Please press confirm on your phone.
+Loading the contact, this may take a little while.
+[INFO][2024-09-30 12:16:52][wechat_channel.py:134] - Wechat login success, user_id: @d1c9010176694f17bcfd49fbb08eff42f5a6108a5d2c1a009565246061ac7f6a, nickname: 木子、
+Start auto replying.
+[INFO][2024-09-30 12:17:12][bridge.py:68] - create bot chatGPT for chat
+[INFO][2024-09-30 12:17:12][chat_gpt_bot.py:57] - [CHATGPT] query=我和丈夫感情不和
+[WARNING][2024-09-30 12:17:15][chat_gpt_session.py:86] - num_tokens_from_messages() is not implemented for model emo. Returning num tokens assuming gpt-3.5-turbo.
+[WARNING][2024-09-30 12:17:17][chat_gpt_session.py:86] - num_tokens_from_messages() is not implemented for model emo. Returning num tokens assuming gpt-3.5-turbo.
+[INFO][2024-09-30 12:17:17][wechat_channel.py:217] - [WX] sendMsg=Reply(type=TEXT, content=[bot] 我们经常吵架，我感到很沮丧。 我不知道怎么纠正错误，我觉得这段关系已经无法挽回。 你能帮帮我吗？\n\n), receiver=@cc678e7c81d355fa55f0e03b3d3edab8e019f18a14225d39c150d0f871393708
+[INFO][2024-09-30 12:17:36][wechat_channel.py:220] - [WX] sendMsg=Reply(type=INFO, content=[INFO]
+会话已重置), receiver=@cc678e7c81d355fa55f0e03b3d3edab8e019f18a14225d39c150d0f871393708
+[INFO][2024-09-30 12:17:44][chat_gpt_bot.py:57] - [CHATGPT] query=我分手了
+[WARNING][2024-09-30 12:17:44][chat_gpt_session.py:86] - num_tokens_from_messages() is not implemented for model emo. Returning num tokens assuming gpt-3.5-turbo.
+[WARNING][2024-09-30 12:17:45][chat_gpt_session.py:86] - num_tokens_from_messages() is not implemented for model emo. Returning num tokens assuming gpt-3.5-turbo.
+[INFO][2024-09-30 12:17:45][wechat_channel.py:217] - [WX] sendMsg=Reply(type=TEXT, content=[bot] 抱抱，最近过的怎么样？\n\n), receiver=@cc678e7c81d355fa55f0e03b3d3edab8e019f18a14225d39c150d0f871393708
+[INFO][2024-09-30 12:17:54][chat_gpt_bot.py:57] - [CHATGPT] query=很不好
+[WARNING][2024-09-30 12:17:54][chat_gpt_session.py:86] - num_tokens_from_messages() is not implemented for model emo. Returning num tokens assuming gpt-3.5-turbo.
+[WARNING][2024-09-30 12:17:56][chat_gpt_session.py:86] - num_tokens_from_messages() is not implemented for model emo. Returning num tokens assuming gpt-3.5-turbo.
+[INFO][2024-09-30 12:17:56][wechat_channel.py:217] - [WX] sendMsg=Reply(type=TEXT, content=[bot] 我明白，分手确实是一件很痛苦的事，会让我们很伤心、难过，甚至对生活绝望。 你能和我说说发生了什么吗？ 你愿意跟我分享你的感受吗？\n\n), receiver=@cc678e7c81d355fa55f0e03b3d3edab8e019f18a14225d39c150d0f871393708
+[INFO][2024-09-30 12:53:23][chat_gpt_bot.py:57] - [CHATGPT] query=我们一直都很好，直到小三出现，打乱了我们的生活
+[WARNING][2024-09-30 12:53:23][chat_gpt_session.py:86] - num_tokens_from_messages() is not implemented for model emo. Returning num tokens assuming gpt-3.5-turbo.
+[WARNING][2024-09-30 12:53:25][chat_gpt_session.py:86] - num_tokens_from_messages() is not implemented for model emo. Returning num tokens assuming gpt-3.5-turbo.
+[INFO][2024-09-30 12:53:26][wechat_channel.py:217] - [WX] sendMsg=Reply(type=TEXT, content=[bot] 这确实让人难以接受，而且突然之间不知道该怎么做。 你一定很困惑，也很难过。 你和你的伴侣谈过了吗？还是已经结束了？\n\n), receiver=@cc678e7c81d355fa55f0e03b3d3edab8e019f18a14225d39c150d0f871393708
+Unexpected sync check result: window.synccheck={retcode:"1102",selector:"0"}
+
+
+---
+
+[{'MsgId': '3319228803679419721', 'FromUserName': '@39f78a311c9c6f0e037089f648f5397326f1ec172dc86b4b493b578d36ad7c34', 'ToUserName': '@39f78a311c9c6f0e037089f648f5397326f1ec172dc86b4b493b578d36ad7c34', 'MsgType': 51, 'Content': '', 'Status': 3, 'ImgStatus': 1, 'CreateTime': 1727689420, 'VoiceLength': 0, 'PlayLength': 0, 'FileName': '', 'FileSize': '', 'MediaId': '', 'Url': '', 'AppMsgType': 0, 'StatusNotifyCode': 4, 'StatusNotifyUserName': 'filehelper,@@6075bf00de2bc7ea5cd3e67acee543da7428a1c7cb8147d6c677c8274f938a4f,@e61bdcfa1d05bd43c892a96df4ebfd882a2e0aac2648a1a3dbbd71781a61a2ed,newsapp,@d8ea6de63f2448dc3d3477ff9ef2fb1f,@@5e74fd75d9d4670a99881f28e363226f5f3a84b58db73f5ad9a25f984d6e3f91,@cf0d6aa3a63a2ff4c5cc86c0ee25fff4,@@e29b38191235e53c7b39d3a8ae78d2cc2fe733d4a3f63be90e6256a0b6242b87,@@d01008f74a709b31fbb5bcd01f3cac04d164c3f6f834fbe1643f3cae15b2c753,@ac90a5d9d88b9a5f84d30cdbbaf11ecd,@b28516bfe52024e3185a64fe92420451,@06e84f33ab6b08553ec04d3f11a47e8801c890dda8f67f412dd43081610e3b4a,@b0e945dc3b44b2eb466d4a3620a3903b,@fb2c65ace0e19e96e1e8295c49152db8,@9c5249caafb998e578d4ce0fb378da2e,@587d558587649a72b6a609b0552fc26d,@313e18c1cfa85e9f24aff3deb24101cf,@@34f4475bf88d0e3595d6bec609d52ba09772dab7328425b39ad4d4bd1ad38a4f,@@457d9135a5129f9ecb6edd773735335bb3fbbbb1a06a0dd46dc8c5b1f16643ad,@c8fab4e99f04f97deae842f8ddc21ada,@a44a1a9e3d011765cddf339a7615dcc1,@6a053e7061dbf74e7358d73191000634,@2548cff783a03445d53a18fc7f34efb5d8c7c0f40cbd56e81319c0b3a0f7584b,@c5d1a8e71f04276db1c84ec106e8edd10b385e2d9475a9bc79977078c4da2f02,@@1e7be0e8377e6660713c8cf76a84649f6021a772e46146a547ef848326f9f5bb,@@1347567fdd02bbf2db148bd9a761687718cdbc995b7341eb296455fdd0e978f5,@9357e5aa3dd448d74fea0d92ab7a393b,@@085aac6f5282269b32fee6fed7ab3fa4e1ca2552e69849b3e73fe7327769f057,@@b02ed0fd5a1cd7c3ae73893cb6a7cea414764611213322ace7b6e29235adda0a,@b8e260c2b092f98f2b2dbe828e550d27,@@7266be600d9dedc72b7bdd5242b87b45bd03f44770e55a2af099408a11fbbdaa,@f31ab949cac052549f2f4fea20a2cefb616551e9c53870191588fc89bacd6ce5,@d4e6c9dba76da3f273f8129088a9107da0d69cdcc7ad362ae143292c3ce25108,@211701b3d0d3f2ff44e4e50c67d34483d9a7ff94b2487ca776c4836a7f288906,weixin,@fc6d719fe8cb6192add3234560a00dee', 'RecommendInfo': {'UserName': '', 'NickName': '', 'QQNum': 0, 'Province': '', 'City': '', 'Content': '', 'Signature': '', 'Alias': '', 'Scene': 0, 'VerifyFlag': 0, 'AttrStatus': 0, 'Sex': 0, 'Ticket': '', 'OpCode': 0}, 'ForwardFlag': 0, 'AppInfo': {'AppID': '', 'Type': 0}, 'HasProductId': 0, 'Ticket': '', 'ImgHeight': 0, 'ImgWidth': 0, 'SubMsgType': 0, 'NewMsgId': 3319228803679419721, 'OriContent': '', 'EncryFileName': '', 'User': <User: {'MemberList': <ContactList: []>, 'UserName': '@39f78a311c9c6f0e037089f648f5397326f1ec172dc86b4b493b578d36ad7c34', 'City': '', 'DisplayName': '', 'PYQuanPin': '', 'RemarkPYInitial': '', 'Province': '', 'KeyWord': '', 'RemarkName': '', 'PYInitial': '', 'EncryChatRoomId': '', 'Alias': '', 'Signature': '有事请联系17527796274', 'NickName': '木子、', 'RemarkPYQuanPin': '', 'HeadImgUrl': '/cgi-bin/mmwebwx-bin/webwxgeticon?seq=1017339699&username=@39f78a311c9c6f0e037089f648f5397326f1ec172dc86b4b493b578d36ad7c34&skey=@crypt_9f66b450_10e161cdb21bf43a1f0297598e0cfe32', 'UniFriend': 0, 'Sex': 0, 'AppAccountFlag': 0, 'VerifyFlag': 0, 'ChatRoomId': 0, 'HideInputBarFlag': 0, 'AttrStatus': 0, 'SnsFlag': 256, 'MemberCount': 0, 'OwnerUin': 0, 'ContactFlag': 0, 'Uin': 4073167854, 'StarFriend': 0, 'Statues': 0, 'WebWxPluginSwitch': 0, 'HeadImgFlag': 1}>, 'Type': 'System', 'Text': [], 'SystemInfo': 'uins'}]
+[{'MsgId': '1762066392422320053', 'FromUserName': '@39f78a311c9c6f0e037089f648f5397326f1ec172dc86b4b493b578d36ad7c34', 'ToUserName': '@39f78a311c9c6f0e037089f648f5397326f1ec172dc86b4b493b578d36ad7c34', 'MsgType': 51, 'Content': '', 'Status': 3, 'ImgStatus': 1, 'CreateTime': 1727689421, 'VoiceLength': 0, 'PlayLength': 0, 'FileName': '', 'FileSize': '', 'MediaId': '', 'Url': '', 'AppMsgType': 0, 'StatusNotifyCode': 11, 'StatusNotifyUserName': '', 'RecommendInfo': {'UserName': '', 'NickName': '', 'QQNum': 0, 'Province': '', 'City': '', 'Content': '', 'Signature': '', 'Alias': '', 'Scene': 0, 'VerifyFlag': 0, 'AttrStatus': 0, 'Sex': 0, 'Ticket': '', 'OpCode': 0}, 'ForwardFlag': 0, 'AppInfo': {'AppID': '', 'Type': 0}, 'HasProductId': 0, 'Ticket': '', 'ImgHeight': 0, 'ImgWidth': 0, 'SubMsgType': 0, 'NewMsgId': 1762066392422320053, 'OriContent': '', 'EncryFileName': '', 'User': <User: {'MemberList': <ContactList: []>, 'UserName': '@39f78a311c9c6f0e037089f648f5397326f1ec172dc86b4b493b578d36ad7c34', 'City': '', 'DisplayName': '', 'PYQuanPin': '', 'RemarkPYInitial': '', 'Province': '', 'KeyWord': '', 'RemarkName': '', 'PYInitial': '', 'EncryChatRoomId': '', 'Alias': '', 'Signature': '有事请联系17527796274', 'NickName': '木子、', 'RemarkPYQuanPin': '', 'HeadImgUrl': '/cgi-bin/mmwebwx-bin/webwxgeticon?seq=1017339699&username=@39f78a311c9c6f0e037089f648f5397326f1ec172dc86b4b493b578d36ad7c34&skey=@crypt_9f66b450_10e161cdb21bf43a1f0297598e0cfe32', 'UniFriend': 0, 'Sex': 0, 'AppAccountFlag': 0, 'VerifyFlag': 0, 'ChatRoomId': 0, 'HideInputBarFlag': 0, 'AttrStatus': 0, 'SnsFlag': 256, 'MemberCount': 0, 'OwnerUin': 0, 'ContactFlag': 0, 'Uin': 4073167854, 'StarFriend': 0, 'Statues': 0, 'WebWxPluginSwitch': 0, 'HeadImgFlag': 1}>, 'Type': 'System', 'Text': [], 'SystemInfo': 'uins'}]
+
+向reboot发送消息
+[{'MsgId': '232351383901191044', 'FromUserName': '@e61bdcfa1d05bd43c892a96df4ebfd882a2e0aac2648a1a3dbbd71781a61a2ed', 'ToUserName': '@39f78a311c9c6f0e037089f648f5397326f1ec172dc86b4b493b578d36ad7c34', 'MsgType': 1, 'Content': '你好', 'Status': 3, 'ImgStatus': 1, 'CreateTime': 1727689629, 'VoiceLength': 0, 'PlayLength': 0, 'FileName': '', 'FileSize': '', 'MediaId': '', 'Url': '', 'AppMsgType': 0, 'StatusNotifyCode': 0, 'StatusNotifyUserName': '', 'RecommendInfo': {'UserName': '', 'NickName': '', 'QQNum': 0, 'Province': '', 'City': '', 'Content': '', 'Signature': '', 'Alias': '', 'Scene': 0, 'VerifyFlag': 0, 'AttrStatus': 0, 'Sex': 0, 'Ticket': '', 'OpCode': 0}, 'ForwardFlag': 0, 'AppInfo': {'AppID': '', 'Type': 0}, 'HasProductId': 0, 'Ticket': '', 'ImgHeight': 0, 'ImgWidth': 0, 'SubMsgType': 0, 'NewMsgId': 232351383901191044, 'OriContent': '', 'EncryFileName': '', 'User': <User: {'MemberList': <ContactList: []>, 'Uin': 0, 'UserName': '@e61bdcfa1d05bd43c892a96df4ebfd882a2e0aac2648a1a3dbbd71781a61a2ed', 'NickName': '在枫中', 'HeadImgUrl': '/cgi-bin/mmwebwx-bin/webwxgeticon?seq=607076511&username=@e61bdcfa1d05bd43c892a96df4ebfd882a2e0aac2648a1a3dbbd71781a61a2ed&skey=@crypt_9f66b450_10e161cdb21bf43a1f0297598e0cfe32', 'ContactFlag': 3, 'MemberCount': 0, 'RemarkName': '', 'HideInputBarFlag': 0, 'Sex': 1, 'Signature': '在看烟火', 'VerifyFlag': 0, 'OwnerUin': 0, 'PYInitial': 'ZFZ', 'PYQuanPin': 'zaifengzhong', 'RemarkPYInitial': '', 'RemarkPYQuanPin': '', 'StarFriend': 0, 'AppAccountFlag': 0, 'Statues': 0, 'AttrStatus': 102501, 'Province': '广东', 'City': '广州', 'Alias': '', 'SnsFlag': 257, 'UniFriend': 0, 'DisplayName': '', 'ChatRoomId': 0, 'KeyWord': '', 'EncryChatRoomId': '', 'IsOwner': 0}>, 'Type': 'Text', 'Text': '你好'}]

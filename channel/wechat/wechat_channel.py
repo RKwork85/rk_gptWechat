@@ -121,6 +121,7 @@ class WechatChannel(ChatChannel):
             # login by scan QRCode
             hotReload = conf().get("hot_reload", False)
             status_path = os.path.join(get_appdata_dir(), "itchat.pkl")
+
             itchat.auto_login(
                 enableCmdQR=2,
                 hotReload=hotReload,
@@ -129,6 +130,7 @@ class WechatChannel(ChatChannel):
                 exitCallback=self.exitCallback,
                 loginCallback=self.loginCallback
             )
+            
             self.user_id = itchat.instance.storageClass.userName
             self.name = itchat.instance.storageClass.nickName
             logger.info("Wechat login success, user_id: {}, nickname: {}".format(self.user_id, self.name))

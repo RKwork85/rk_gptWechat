@@ -84,10 +84,11 @@ def produce_msg(core, msgList):
                 msg = {
                     'Type': 'Map',
                     'Text': data,}
-            else:
-                msg = {
+            else:                                   
+                msg = {                             
                     'Type': 'Text',
                     'Text': m['Content'],}
+                # print(msg)                                    ## 这里检测到微信中产生的消息列表：并获取到相关类型及内容
         elif m['MsgType'] == 3 or m['MsgType'] == 47: # picture
             download_fn = get_download_fn(core,
                 '%s/webwxgetmsgimg' % core.loginInfo['url'], m['NewMsgId'])
@@ -222,6 +223,7 @@ def produce_msg(core, msgList):
                 'Text': 'UselessMsg', }
         m = dict(m, **msg)
         rl.append(m)
+        # print(rl)                         详见 line 98: /home/rkwork/rkwork/project/chatgpt-on-wechat/rkwork/development/logs           
     return rl
 
 def produce_group_chat(core, msg):
@@ -281,7 +283,9 @@ def send_raw_msg(self, msgType, content, toUserName):
 def send_msg(self, msg='Test Message', toUserName=None):
     logger.debug('Request to send a text message to %s: %s' % (toUserName, msg))
     r = self.send_raw_msg(1, msg, toUserName)
-    return r
+
+    print("rkwork: r的内容", r)
+    return r                                    # r的内容 {'BaseResponse': {'Ret': 0, 'ErrMsg': '请求成功', 'RawMsg': '请求成功'}, 'MsgID': '363664630167172925', 'LocalID': '17276903856577'}
 
 def _prepare_file(fileDir, file_=None):
     fileDict = {}
